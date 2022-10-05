@@ -1,0 +1,23 @@
+/*GENERAL*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/*HEADER*/
+header {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0 15px 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+}
+
+#logo {
+  width: 50%;
+}
+
+/*# sourceMappingURL=styles.css.map */
