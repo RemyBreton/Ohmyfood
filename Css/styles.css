@@ -1,23 +1,66 @@
 /*GENERAL*/
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
 }
 
 /*HEADER*/
-header {
+.header_logo {
   display: flex;
   justify-content: center;
   padding: 25px 0 15px 0;
+  background-color: white;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+  position: relative;
+  z-index: 1;
 }
 
 #logo {
   width: 50%;
+}
+
+/*LOCATION*/
+.header_location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  padding: 20px 0;
+}
+.header_location span {
+  font-size: 20px;
+  margin-left: 18px;
+}
+.header_location i {
+  font-size: 22px;
+}
+
+/*DISCOVERY*/
+.discovery_functionary .discovery {
+  text-align: center;
+  padding: 12px 20px 50px;
+  background-color: #f6f6f6;
+}
+.discovery_functionary .discovery h1 {
+  font-size: 28px;
+  margin-bottom: 0;
+}
+.discovery_functionary .discovery p {
+  margin-bottom: 24px;
+}
+.discovery_functionary .discovery button {
+  padding: 16px 20px;
+  border-radius: 32px;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */
