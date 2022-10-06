@@ -39,27 +39,80 @@ body {
 }
 
 /*DISCOVERY*/
-.discovery_functionary {
-    .discovery {
-        text-align: center;
-        padding: 12px 20px 50px;
+.discovery {
+    text-align: center;
+    padding: 12px 20px 50px;
+    background-color: #f6f6f6;
+    margin-bottom: 40px;
+    h1 {
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+    p {
+        margin-bottom: 24px;
+    }
+    button {
+        padding: 16px 20px;
+        border-radius: 32px;
+        background: linear-gradient(#ff79da, #9356dc);
+        box-shadow: 0 5px 10px rgb(0 0 0 / 30%);            border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+/*FUNCTIONARY*/
+.functionary {
+    padding: 0 24px;
+    h2 {
+        margin: 0 0 32px 0;
+    }
+    ol {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+        padding: 0;
+        margin: 0 0 50px;
+    }
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #9356dc;
+        color: white;
+        height: 35px;
+        width: 35px;
+        margin-left: -30px;
+    }
+    li {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
         background-color: #f6f6f6;
-        h1 {
-            font-size: 28px;
-            margin-bottom: 0;
+        padding: 10px 15px;
+        border-radius: 20px;
+        gap: 16px;
+        font-weight: bold;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        i {
+            color: #7e7e7e;
         }
-        p {
-            margin-bottom: 24px;
-        }
-        button {
-            padding: 16px 20px;
-            border-radius: 32px;
-            background: linear-gradient(#ff79da, #9356dc);
-            box-shadow: 0 5px 10px rgb(0 0 0 / 30%);
-            border: none;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
+        &:hover {
+            background-color: #f5edff;
+                i {
+                    color: #9356dc;
+            }
         }
     }
+}
+/*RESTAURANTS*/
+.restaurant {
+    padding: 50px 24px;
+    background-color: #f6f6f6;
+    h2 {
+        margin: 0 0 32px 0;
+    }
+    
 }

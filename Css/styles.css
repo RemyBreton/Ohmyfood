@@ -40,19 +40,20 @@ body {
 }
 
 /*DISCOVERY*/
-.discovery_functionary .discovery {
+.discovery {
   text-align: center;
   padding: 12px 20px 50px;
   background-color: #f6f6f6;
+  margin-bottom: 40px;
 }
-.discovery_functionary .discovery h1 {
+.discovery h1 {
   font-size: 28px;
   margin-bottom: 0;
 }
-.discovery_functionary .discovery p {
+.discovery p {
   margin-bottom: 24px;
 }
-.discovery_functionary .discovery button {
+.discovery button {
   padding: 16px 20px;
   border-radius: 32px;
   background: linear-gradient(#ff79da, #9356dc);
@@ -61,6 +62,62 @@ body {
   color: white;
   font-size: 16px;
   cursor: pointer;
+}
+
+/*FUNCTIONARY*/
+.functionary {
+  padding: 0 24px;
+}
+.functionary h2 {
+  margin: 0 0 32px 0;
+}
+.functionary ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  padding: 0;
+  margin: 0 0 50px;
+}
+.functionary p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #9356dc;
+  color: white;
+  height: 35px;
+  width: 35px;
+  margin-left: -30px;
+}
+.functionary li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding: 10px 15px;
+  border-radius: 20px;
+  gap: 16px;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.functionary li i {
+  color: #7e7e7e;
+}
+.functionary li:hover {
+  background-color: #f5edff;
+}
+.functionary li:hover i {
+  color: #9356dc;
+}
+
+/*RESTAURANTS*/
+.restaurant {
+  padding: 50px 24px;
+  background-color: #f6f6f6;
+}
+.restaurant h2 {
+  margin: 0 0 32px 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
