@@ -10,6 +10,84 @@ body {
     margin: 0;
 }
 
+/*LOADER*/
+.loader{
+	-webkit-perspective:700px;
+	perspective: 700px; /*pour donner une impression de perspective*/
+    display: flex;
+    align-items: center;    /*afin de centrer les element au centre*/
+    justify-content: center;
+    position: fixed;    /*position etabli par le bloc conteneur initial alias la fenetre*/
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient($two-color, $first-color);
+    opacity: 0.9;
+    animation: loader 0.01s;    
+    animation-delay: 3.5s;   /*durée d'attente*/
+    animation-fill-mode: both;  /*pour etendre l'animation à la fois vers l'avant et l'arriere*/
+    z-index: 100;   /*afin qu'il soit en premier page*/
+}
+.loader>span{
+	font-size: 40px;
+	font-family: "Shrikhand",sans-serif;
+	display: inline-block;
+	animation:flip 2.6s linear;
+    color: white;
+	transform-origin:0 70%; /*definir l'origine des transformations de l'element*/
+	transform-style:preserve-3d;    /*afin que les elements fils soient disposés dans l'espace tridimensionnel*/
+	-webkit-transform-style:preserve-3d;
+}
+.loader i {
+    margin-left: 16px;
+}
+@keyframes flip{
+	35%{
+		transform: rotateX(360deg); /*faire des rotation sur l'axe x*/
+	}
+    80% {
+        opacity: 0; /*commence à mettre de l'aoppacité à 80% de charge*/
+    }
+	100%{
+		transform: rotatex(360deg);
+	}
+}
+@keyframes loader { /*pour cacher le loader une fois chargé a 100%*/
+    100% {
+      opacity: 0;
+      display: none;
+    }
+}
+.loader>span:nth-child(2){
+	animation-delay: 0.4s;  /*durée d'attente*/
+}
+
+.loader>span:nth-child(3){
+	animation-delay: 0.7s;
+}
+
+.loader>span:nth-child(4){
+	animation-delay: 1s;
+}
+
+.loader>span:nth-child(5){
+	animation-delay: 1.3s;
+}
+
+.loader>span:nth-child(6){
+	animation-delay: 1.6s
+}
+
+.loader>span:nth-child(7){
+	animation-delay: 1.9s
+}
+.loader>span:nth-child(8){
+	animation-delay: 2.2s
+}
+.loader>span:nth-child(9){
+	animation-delay: 2.5s
+}
 /*HEADER*/
 .header_logo {
     display: flex;
