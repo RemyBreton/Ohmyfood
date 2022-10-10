@@ -1,6 +1,6 @@
 /*Restaurant page*/
 /*Header*/
-.header_logo {
+.header-logo {
     a {
         display: flex;
         align-items: center;       
@@ -9,7 +9,7 @@
         margin-left: 16px;
         font-size: 22px;
     }
-    .container_logo {
+    .container-logo {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -21,7 +21,7 @@ img {
     max-height: 500px;
 }
 /*menu*/
-.container_menu {
+.container-menu {
     background-color: #eaeaea;
     border-radius: 32px 32px 0 0;
     z-index: 1;
@@ -30,10 +30,62 @@ img {
     margin-top: -48px;
 }
 .menu-titre {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     h2 {
         font-family: "Shrikhand", cursive;
+        font-weight: 500;
     }
 }
+.heart-menu {
+    input[type="checkbox"]{
+        display: none;
+    }
+    .unchecked,
+    .checked {
+        position: absolute;
+        right: 16px;
+        bottom: 98px;
+        font-size: 32px;
+    }
+    .unchecked {
+        transition-duration: 1.5s; /*temps de transition*/
+    }
+    .checked {
+        opacity: 0;
+        background: linear-gradient($two-color, $first-color);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        transition-duration: 1s;
+    }
+    input[type="checkbox"]:checked ~ .checked {
+        display: inline-block;
+        opacity: 1;
+    }
+    input[type="checkbox"]:checked ~ .unchecked {
+        display: none;
+    }
+    &:hover .checked {
+        opacity: 1; /*rend visible l'element en hover*/
+    }
+    &:hover .unchecked {
+        opacity: 0; /*afin de rendre "invisible" pour pas voir de bordure*/
+    }
+}
+.menu-body {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    h3 {
+        text-transform: uppercase;
+        position: relative;
+        font-weight: 400;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 64px;
+            height: 4px;
+            background-color: $third-color;
+            bottom: -8px;
+            left: 0;
+        }
+    }
+} 

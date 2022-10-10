@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*GENERAL*/ /*Restaurant page*/
 /*Header*/
-.header_logo a {
+.header-logo a {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -9,7 +9,7 @@
   margin-left: 16px;
   font-size: 22px;
 }
-.header_logo .container_logo {
+.header-logo .container-logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +22,7 @@ img {
 }
 
 /*menu*/
-.container_menu {
+.container-menu {
   background-color: #eaeaea;
   border-radius: 32px 32px 0 0;
   z-index: 1;
@@ -31,13 +31,63 @@ img {
   margin-top: -48px;
 }
 
-.menu-titre {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .menu-titre h2 {
   font-family: "Shrikhand", cursive;
+  font-weight: 500;
+}
+
+.heart-menu input[type=checkbox] {
+  display: none;
+}
+.heart-menu .unchecked,
+.heart-menu .checked {
+  position: absolute;
+  right: 16px;
+  bottom: 98px;
+  font-size: 32px;
+}
+.heart-menu .unchecked {
+  transition-duration: 1.5s; /*temps de transition*/
+}
+.heart-menu .checked {
+  opacity: 0;
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  transition-duration: 1s;
+}
+.heart-menu input[type=checkbox]:checked ~ .checked {
+  display: inline-block;
+  opacity: 1;
+}
+.heart-menu input[type=checkbox]:checked ~ .unchecked {
+  display: none;
+}
+.heart-menu:hover .checked {
+  opacity: 1; /*rend visible l'element en hover*/
+}
+.heart-menu:hover .unchecked {
+  opacity: 0; /*afin de rendre "invisible" pour pas voir de bordure*/
+}
+
+.menu-body {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.menu-body h3 {
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 400;
+}
+.menu-body h3::after {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 4px;
+  background-color: #99e2d0;
+  bottom: -8px;
+  left: 0;
 }
 
 * {
@@ -134,7 +184,7 @@ body {
 }
 
 /*HEADER*/
-.header_logo {
+.header-logo {
   display: flex;
   justify-content: center; /*centrera l'image*/
   padding: 25px 0 15px 0;
@@ -256,87 +306,90 @@ body {
   }
 }
 /*RESTAURANTS*/
-.restaurant {
+#restaurant {
   padding: 50px 24px;
   background-color: #f6f6f6;
 }
-.restaurant h2 {
+#restaurant h2 {
   margin: 0 0 32px 0;
 }
 
-.container_restaurant-card {
+.container-restaurant-card {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.restaurant_card {
-  border-radius: 16px;
-  position: relative; /*pour cree un contexte d'empilement*/
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-.restaurant_card a {
-  text-decoration: none;
-  color: inherit;
-}
-.restaurant_card .news {
-  position: absolute;
-  right: 16px; /*placement  par rapport a son ancetre le plus proche*/
-  top: 16px;
-  background: #99e2d0;
-  padding: 8px 16px;
-  color: #1b6150;
-}
-
-.restaurant_card-img {
-  height: 192px;
-}
-.restaurant_card-img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 16px 16px 0 0;
-  object-fit: cover;
-}
-
-.restaurant_card-body {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.restaurant-card {
   background-color: white;
-  width: 100%;
-  border-radius: 0 0 16px 16px;
-  padding: 12px;
-}
-.restaurant_card-body h3, .restaurant_card-body p {
-  margin: 0;
-}
-
-.heart {
+  border-radius: 16px;
   position: relative;
+  height: 250px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
-.heart .hoveroff {
+.restaurant-card a {
+  text-decoration: none;
+  color: black;
+}
+.restaurant-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 70%;
+  border-radius: 16px 16px 0 0;
+}
+.restaurant-card span {
   position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 5px 13px;
+}
+.restaurant-card h3 {
+  margin: 0;
+  padding: 15px 12px 3px 12px;
+}
+.restaurant-card p {
+  margin: 0;
+  padding: 0 12px;
+  font-weight: 300;
+}
+.restaurant-card input[type=checkbox] {
+  display: none;
+}
+.restaurant-card .unchecked,
+.restaurant-card .checked {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 32px;
+}
+.restaurant-card .unchecked {
   transition-duration: 1.5s; /*temps de transition*/
 }
-.heart .hover {
-  opacity: 0; /*cache l'element avant le hover*/
-  transition-duration: 1s;
+.restaurant-card .checked {
+  opacity: 0;
   background: linear-gradient(#ff79da, #9356dc);
-  -webkit-background-clip: text; /*afin que la zone d'arriere-plan s'etend dans le texte*/
-  -webkit-text-fill-color: transparent; /*afin que l'icone devienne transparente et qu'on puisse faire un background-color*/
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  transition-duration: 1s;
 }
-.heart:hover .hover {
+.restaurant-card input[type=checkbox]:checked ~ .checked {
+  display: inline-block;
+  opacity: 1;
+}
+.restaurant-card input[type=checkbox]:checked ~ .unchecked {
+  display: none;
+}
+.restaurant-card .heart:hover .checked {
   opacity: 1; /*rend visible l'element en hover*/
 }
-.heart:hover .hoveroff {
+.restaurant-card .heart:hover .unchecked {
   opacity: 0; /*afin de rendre "invisible" pour pas voir de bordure*/
-}
-.heart i {
-  font-size: 32px;
 }
 
 @media (min-width: 768px) {
-  .container_restaurant-card {
+  .container-restaurant-card {
     display: grid;
     grid-template-columns: 1fr 1fr; /*afin de cree deux colonne*/
   }

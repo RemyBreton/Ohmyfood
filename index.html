@@ -39,11 +39,11 @@
         <span><i class="fa-solid fa-utensils"></i></span>
 	</div>
         <!-- HEADER -->
-    <header class="header_logo">
+    <header class="header-logo">
         <img id="logo" src="images/logo/ohmyfood.png" alt="Ohmyfood">
     </header>
         <!--LOCATION-->
-    <section class="location_discovery_functionary">
+    <section id="location-discovery-functionary">
         <div class="location">
             <i class="fa-solid fa-location-dot location--i"></i>
             <span>Paris, Belleville</span>
@@ -51,8 +51,10 @@
         <!--DISCOVERY-->
         <div class="discovery">
             <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrz les restaurants d'exceptions, séléctionnés par nos soins.</p>
-            <button type="submit">Explorer nos restaurants</button>
+            <p>Découvrez les restaurants d'exceptions, séléctionnés par nos soins.</p>
+            <form action="index.html">
+                <button type="submit">Explorer nos restaurants</button>
+            </form>
         </div>
         <!--FUNCTIONARY-->
         <div class="functionary">
@@ -77,98 +79,62 @@
         </div>
     </section>
     <main>
-        <section class="restaurant">
+        <section id="restaurant">
             <h2>Restaurants</h2>
-            <div class="container_restaurant-card">
-            <!--CARD 1-->
-                <article class="restaurant_card">
-                    <a href="pages/La_palette_du_goût.html">
+            <div class="container-restaurant-card">
+        <!--CARD 1-->
+                <article class="restaurant-card">
+                    <a href="../pages/La_palette_du_goût.html">
+                        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
                         <span class="news">Nouveau</span>
-                        <div class="restaurant_card-img">
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                        </div>
-                        <div class="restaurant_card-body">
-                            <div class="restaurant_titre-text">
-                                <div class="restaurant_card-titre">
-                                    <h3>La palette du goût</h3>
-                                </div>
-                                <div class="restaurant_card-text">
-                                    <p>Ménilmontant</p>
-                                </div>
-                            </div>
-                            <div class="heart">
-                                <i class="hoveroff fa-regular fa-heart"></i>
-                                <i class="hover fa-solid fa-heart"></i>
-                            </div>    
-                        </div>
-                    </a>   
+                        <h3>La palette du goût</h3>
+                        <p>Ménilmontant</p>
+                    </a>
+                    <label class="heart">
+                        <input type="checkbox">
+                        <i class="fa-regular fa-heart unchecked"></i>
+                        <i class="on fa-solid fa-heart checked"></i>
+                    </label>
                 </article>
         <!--CARD 2-->
-                <article class="restaurant_card">
-                    <a href="#">
+                <article class="restaurant-card">
+                    <a href="../pages/La_palette_du_goût.html">
+                        <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
                         <span class="news">Nouveau</span>
-                        <div class="restaurant_card-img">
-                            <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
-                        </div>
-                        <div class="restaurant_card-body">
-                            <div class="restaurant_titre-text">
-                                <div class="restaurant_card-titre">
-                                    <h3>La note enchantée</h3>
-                                </div>
-                                <div class="restaurant_card-text">
-                                    <p>Charonne</p>
-                                </div>
-                            </div>
-                            <div class="heart">
-                                <i class="hoveroff fa-regular fa-heart"></i>
-                                <i class="hover fa-solid fa-heart"></i>
-                            </div>    
-                        </div>
+                        <h3>La note enchantée</h3>
+                        <p>Charonne</p>
                     </a>
+                    <label class="heart">
+                        <input type="checkbox">
+                        <i class="fa-regular fa-heart unchecked"></i>
+                        <i class="on fa-solid fa-heart checked"></i>
+                    </label>
                 </article>
-                <!--CARD 3-->
-                <article class="restaurant_card">
-                    <a href="#">
-                        <div class="restaurant_card-img">
-                            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
-                        </div>
-                        <div class="restaurant_card-body">
-                            <div class="restaurant_titre-text">
-                                <div class="restaurant_card-titre">
-                                    <h3>À la française</h3>
-                                </div>
-                                <div class="restaurant_card-text">
-                                    <p>Cité Rouge</p>
-                                </div>
-                            </div>
-                            <div class="heart">
-                                <i class="hoveroff fa-regular fa-heart"></i>
-                                <i class="hover fa-solid fa-heart"></i>
-                            </div>    
-                        </div>
+        <!--CARD 3-->
+                <article class="restaurant-card">
+                    <a href="../pages/La_palette_du_goût.html">
+                        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
+                        <h3>À la française</h3>
+                        <p>Cité Rouge</p>
                     </a>
+                    <label class="heart">
+                        <input type="checkbox">
+                        <i class="fa-regular fa-heart unchecked"></i>
+                        <i class="on fa-solid fa-heart checked"></i>
+                    </label>
                 </article>
-            <!--CARD 4-->
-                <article class="restaurant_card">
-                    <a href="#">
-                        <div class="restaurant_card-img">
-                            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
-                        </div>
-                        <div class="restaurant_card-body">
-                            <div class="restaurant_titre-text">
-                                <div class="restaurant_card-titre">
-                                    <h3>Le délice des sens</h3>
-                                </div>
-                                <div class="restaurant_card-text">
-                                    <p>Folie-Méricourt</p>
-                                </div>
-                            </div>
-                            <div class="heart">
-                                <i class="hoveroff fa-regular fa-heart"></i>
-                                <i class="hover fa-solid fa-heart"></i>
-                            </div>    
-                        </div>
+        <!--CARD 4-->
+                <article class="restaurant-card">
+                    <a href="../pages/La_palette_du_goût.html">
+                        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+                        <h3>Le délice des sens</h3>
+                        <p>Folie-Méricout</p>
                     </a>
+                    <label class="heart">
+                        <input type="checkbox">
+                        <i class="fa-regular fa-heart unchecked"></i>
+                        <i class="on fa-solid fa-heart checked"></i>
+                    </label>
                 </article>
             </div>
         </section>
