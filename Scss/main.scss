@@ -108,7 +108,11 @@ body {
         width: 30%; /*reajustement de la taille du logo*/
     } 
 }
-
+@media (min-width: 992px) {
+    #logo {
+        width: 20%; /*reajustement de la taille du logo*/
+    } 
+}
 /*LOCATION*/
 .location {
     display: flex;
@@ -256,7 +260,7 @@ body {
         font-weight: 300;
     }
     input[type="checkbox"]{
-        display: none;
+        display: none;      /*pour desactiver la checkbox d'origine*/
     }
     .unchecked,
     .checked {
@@ -264,6 +268,7 @@ body {
         right: 20px;
         bottom: 20px;
         font-size: 32px;
+        cursor: pointer;
     }
     .unchecked {
         transition-duration: 1.5s; /*temps de transition*/
@@ -271,28 +276,38 @@ body {
     .checked {
         opacity: 0;
         background: linear-gradient($two-color, $first-color);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;       /*afin que l'icone devienne transparente et qu'on puisse faire un background-color*/
+        -webkit-background-clip: text;      /*afin que la zone d'arriere-plan s'etend dans le texte*/
         transition-duration: 1s;
     }
     input[type="checkbox"]:checked ~ .checked {
         display: inline-block;
-        opacity: 1;
+        opacity: 1;     /*pour faire apparaitre quand c'est coché*/
     }
     input[type="checkbox"]:checked ~ .unchecked {
-        display: none;
-    }
-    .heart:hover .checked {
-        opacity: 1; /*rend visible l'element en hover*/
-    }
-    .heart:hover .unchecked {
-        opacity: 0; /*afin de rendre "invisible" pour pas voir de bordure*/
+        display: none;  /*desactive quand c'est coché*/
     }
 }
 @media (min-width:768px) {
     .container-restaurant-card {
         display: grid;
         grid-template-columns: 1fr 1fr;     /*afin de cree deux colonne*/
+    }
+}
+@media (min-width:992px) {
+    #restaurant h2 {
+        text-align: center;
+    }
+    .container-restaurant-card {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media (min-width: 992px) {
+    .heart:hover .checked {
+        opacity: 1; /*rend visible l'element en hover*/
+    }
+    .heart:hover .unchecked {
+        opacity: 0; /*afin de rendre "invisible" pour pas voir de bordure*/
     }
 }
 /*FOOTER*/

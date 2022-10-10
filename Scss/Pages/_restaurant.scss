@@ -13,6 +13,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 100%;
     }
 }
 img {
@@ -45,6 +46,7 @@ img {
         right: 16px;
         bottom: 98px;
         font-size: 32px;
+        cursor: pointer;
     }
     .unchecked {
         transition-duration: 1.5s; /*temps de transition*/
@@ -52,8 +54,8 @@ img {
     .checked {
         opacity: 0;
         background: linear-gradient($two-color, $first-color);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;       /*afin que l'icone devienne transparente et qu'on puisse faire un background-color*/
+        -webkit-background-clip: text;      /*afin que la zone d'arriere-plan s'etend dans le texte*/
         transition-duration: 1s;
     }
     input[type="checkbox"]:checked ~ .checked {
@@ -63,15 +65,17 @@ img {
     input[type="checkbox"]:checked ~ .unchecked {
         display: none;
     }
-    &:hover .checked {
+}
+@media (min-width: 992px) {
+    .heart-menu:hover .checked {
         opacity: 1; /*rend visible l'element en hover*/
     }
-    &:hover .unchecked {
+    .heart-menu:hover .unchecked {
         opacity: 0; /*afin de rendre "invisible" pour pas voir de bordure*/
     }
 }
 .menu-body {
-    overflow: hidden;
+    overflow: hidden; /*contenu est rogné si besoin pour etre dans la boite et aucune barre sera affiché*/
     display: flex;
     flex-direction: column;
     h3 {
