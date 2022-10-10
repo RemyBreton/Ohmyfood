@@ -1,0 +1,39 @@
+/*Restaurant page*/
+/*Header*/
+.header_logo {
+    a {
+        display: flex;
+        align-items: center;       
+        text-decoration: none;
+        color: inherit;
+        margin-left: 16px;
+        font-size: 22px;
+    }
+    .container_logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 500px;
+}
+/*menu*/
+.container_menu {
+    background-color: #eaeaea;
+    border-radius: 32px 32px 0 0;
+    z-index: 1;
+    position: relative;
+    padding: 16px;
+    margin-top: -48px;
+}
+.menu-titre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+        font-family: "Shrikhand", cursive;
+    }
+}

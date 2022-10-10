@@ -1,5 +1,45 @@
 @charset "UTF-8";
-/*GENERAL*/
+/*GENERAL*/ /*Restaurant page*/
+/*Header*/
+.header_logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  margin-left: 16px;
+  font-size: 22px;
+}
+.header_logo .container_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+/*menu*/
+.container_menu {
+  background-color: #eaeaea;
+  border-radius: 32px 32px 0 0;
+  z-index: 1;
+  position: relative;
+  padding: 16px;
+  margin-top: -48px;
+}
+
+.menu-titre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-titre h2 {
+  font-family: "Shrikhand", cursive;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -24,7 +64,7 @@ body {
   background: linear-gradient(#ff79da, #9356dc);
   opacity: 0.9;
   animation: loader 0.01s;
-  animation-delay: 3.5s; /*durée d'attente*/
+  animation-delay: 3s; /*durée d'attente*/
   animation-fill-mode: both; /*pour etendre l'animation à la fois vers l'avant et l'arriere*/
   z-index: 100; /*afin qu'il soit en premier page*/
 }
@@ -58,39 +98,39 @@ body {
 @keyframes loader { /*pour cacher le loader une fois chargé a 100%*/
   100% {
     opacity: 0;
-    display: none;
+    z-index: -1000;
   }
 }
 .loader > span:nth-child(2) {
-  animation-delay: 0.4s; /*durée d'attente*/
+  animation-delay: 0.3s; /*durée d'attente*/
 }
 
 .loader > span:nth-child(3) {
-  animation-delay: 0.7s;
+  animation-delay: 0.6s;
 }
 
 .loader > span:nth-child(4) {
-  animation-delay: 1s;
+  animation-delay: 0.9s;
 }
 
 .loader > span:nth-child(5) {
-  animation-delay: 1.3s;
+  animation-delay: 1.2s;
 }
 
 .loader > span:nth-child(6) {
-  animation-delay: 1.6s;
+  animation-delay: 1.5s;
 }
 
 .loader > span:nth-child(7) {
-  animation-delay: 1.9s;
+  animation-delay: 1.8s;
 }
 
 .loader > span:nth-child(8) {
-  animation-delay: 2.2s;
+  animation-delay: 2.1s;
 }
 
 .loader > span:nth-child(9) {
-  animation-delay: 2.5s;
+  animation-delay: 2.4s;
 }
 
 /*HEADER*/
@@ -105,9 +145,14 @@ body {
 }
 
 #logo {
-  width: 50%; /*ajustera la taille du logo*/
+  width: 45%; /*ajustera la taille du logo*/
 }
 
+@media (min-width: 768px) {
+  #logo {
+    width: 30%; /*reajustement de la taille du logo*/
+  }
+}
 /*LOCATION*/
 .location {
   display: flex;
@@ -152,6 +197,7 @@ body {
 .discovery button:hover {
   transform: scale(1.02); /*grossira au passage de la souris*/
   opacity: 0.9; /*reduira l'opacity au passage de la souris*/
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 /*FUNCTIONARY*/
@@ -201,6 +247,14 @@ body {
   color: #9356dc; /*changera la couleur de l'icone au passage de la souris*/
 }
 
+@media (min-width: 768px) {
+  .functionary {
+    text-align: center;
+  }
+  .functionary ol {
+    flex-direction: row; /*pour mettre en ligne et remplacer la colonne*/
+  }
+}
 /*RESTAURANTS*/
 .restaurant {
   padding: 50px 24px;
@@ -281,6 +335,12 @@ body {
   font-size: 32px;
 }
 
+@media (min-width: 768px) {
+  .container_restaurant-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*afin de cree deux colonne*/
+  }
+}
 /*FOOTER*/
 footer {
   background-color: #353535;
