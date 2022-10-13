@@ -141,8 +141,23 @@ img {
   height: 64px; /*hauteur de la card*/
   border-radius: 16px;
   margin-bottom: 16px; /*marge entre chaque card*/
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  animation: fadein 4.4s;
+  animation-delay: 0.01s;
+  animation-fill-mode: both;
+  opacity: 0;
   cursor: pointer;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .menu-card .card-text {
   display: flex;
@@ -196,6 +211,46 @@ img {
 }
 .menu-card input[type=checkbox]:checked ~ .card-check i {
   transform: rotate(0deg); /*pour afficher la check au clique*/
+}
+
+.delay-1 {
+  animation-delay: 0.4s;
+}
+
+.delay-2 {
+  animation-delay: 0.8s;
+}
+
+.delay-3 {
+  animation-delay: 1.2s;
+}
+
+.delay-4 {
+  animation-delay: 1.6s;
+}
+
+.delay-5 {
+  animation-delay: 2s;
+}
+
+.delay-6 {
+  animation-delay: 2.4s;
+}
+
+.delay-7 {
+  animation-delay: 2.8s;
+}
+
+.delay-8 {
+  animation-delay: 3.2s;
+}
+
+.delay-9 {
+  animation-delay: 3.6s;
+}
+
+.delay-10 {
+  animation-delay: 4s;
 }
 
 @media (min-width: 992px) {
