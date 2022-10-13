@@ -19,7 +19,7 @@
 img {
   width: 100%;
   object-fit: cover;
-  max-height: 500px;
+  max-height: 500px; /*hauteur max de l'image*/
 }
 
 /*menu*/
@@ -29,22 +29,44 @@ img {
   z-index: 1;
   position: relative;
   padding: 16px;
-  margin-top: -48px;
+  margin-top: -48px; /*pour que me container passe au dessus de l'image*/
+  display: flex;
+  flex-direction: column;
+}
+.container-menu form {
+  align-self: center; /*aligner le bouton au centre*/
+  padding: 20px 0 30px;
+}
+.container-menu button {
+  padding: 16px 50px;
+  border-radius: 32px;
+  background: linear-gradient(#ff79da, #9356dc); /*fera un degradé de couleur*/
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  border: none; /*retire la border*/
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.25s;
+}
+.container-menu button:hover {
+  transform: scale(1.02); /*grossira au passage de la souris*/
+  opacity: 0.9; /*reduira l'opacity au passage de la souris*/
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
-.menu-titre h2 {
+.menu-titre h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 500;
 }
 
 .heart-menu input[type=checkbox] {
-  display: none;
+  display: none; /*desactive la petite box*/
 }
 .heart-menu .unchecked,
 .heart-menu .checked {
   position: absolute;
   right: 16px;
-  bottom: 98px;
+  top: 38px; /*pour placer le coeur*/
   font-size: 32px;
   cursor: pointer;
 }
@@ -60,10 +82,10 @@ img {
 }
 .heart-menu input[type=checkbox]:checked ~ .checked {
   display: inline-block;
-  opacity: 1;
+  opacity: 1; /*reactive l'opacity pour faire apparaître le coeur*/
 }
 .heart-menu input[type=checkbox]:checked ~ .unchecked {
-  display: none;
+  display: none; /*desactive pour les bordures*/
 }
 
 @media (min-width: 992px) {
@@ -74,26 +96,117 @@ img {
     opacity: 0; /*afin de rendre "invisible" pour pas voir de bordure*/
   }
 }
+@media (min-width: 1092px) {
+  .container-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+  }
+}
 .menu-body {
   overflow: hidden; /*contenu est rogné si besoin pour etre dans la boite et aucune barre sera affiché*/
   display: flex;
   flex-direction: column;
 }
-.menu-body h3 {
-  text-transform: uppercase;
+.menu-body h2 {
+  text-transform: uppercase; /*met le texte en majuscule*/
   position: relative;
-  font-weight: 400;
+  font-weight: 350;
 }
-.menu-body h3::after {
+.menu-body h2::after {
   content: "";
   position: absolute;
   width: 64px;
-  height: 4px;
+  height: 4px; /*afin de cree la barre sour les titre*/
   background-color: #99e2d0;
   bottom: -8px;
   left: 0;
 }
 
+.entrée,
+.plats,
+.dessert {
+  display: flex;
+  flex-direction: column; /*pour placer les cards en colonne*/
+  overflow: hidden; /*pour que sa ne depasse pas*/
+  margin-bottom: 32px;
+}
+
+/*Card menu*/
+.menu-card {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /*rogne pour ne pas de depassement*/
+  height: 64px; /*hauteur de la card*/
+  border-radius: 16px;
+  margin-bottom: 16px; /*marge entre chaque card*/
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  cursor: pointer;
+}
+.menu-card .card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  margin-left: 16px;
+  flex: 1 1 0; /*raccourcie flex-grow ,shrink,basis afin d'alouer l'espace*/
+}
+.menu-card .card-text h3,
+.menu-card .card-text p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis; /*le rognage se fera à la bordure de la boîte*/ /*le tout pour un effet de point de supsenssion pendant le rognage*/
+  white-space: nowrap; /*empeche le retour a la ligne*/
+}
+.menu-card .card-price {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  min-width: 40px; /*taille mini*/
+}
+.menu-card .card-check {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99e2d0;
+  transition: all 0.5s;
+  width: 56px;
+  margin-right: -56px;
+}
+.menu-card .card-check i {
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  color: #99e2d0;
+  transform: rotate(180deg); /*afin de cree une annimation lors du hover*/
+  transition-duration: 0.7s; /*temps de transition*/
+  transition-delay: 0.1s;
+}
+.menu-card input[type=checkbox] {
+  display: none;
+}
+.menu-card input[type=checkbox]:checked ~ .card-check {
+  margin: 0;
+}
+.menu-card input[type=checkbox]:checked ~ .card-check i {
+  transform: rotate(0deg); /*pour afficher la check au clique*/
+}
+
+@media (min-width: 992px) {
+  .menu-card:hover .card-check {
+    margin: 0;
+  }
+  .menu-card:hover .card-check i {
+    transform: rotate(0deg); /*fera une animation de rotation*/
+  }
+}
+/*Restaurant page fin*/
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
