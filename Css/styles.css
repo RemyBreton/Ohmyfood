@@ -11,8 +11,8 @@
 }
 .header-logo .container-logo {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /*centrera verticalement*/
+  justify-content: center; /*centrera horizontalement*/
   width: 100%;
 }
 
@@ -164,7 +164,7 @@ img {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  margin-left: 16px;
+  margin: 0 16px;
   flex: 1 1 0; /*raccourcie flex-grow ,shrink,basis afin d'alouer l'espace*/
 }
 .menu-card .card-text h3,
@@ -183,8 +183,8 @@ img {
 .menu-card .card-check {
   height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /*centrera verticalement*/
+  justify-content: center; /*centrera horizontalement*/
   background-color: #99e2d0;
   transition: all 0.5s;
   width: 56px;
@@ -194,8 +194,8 @@ img {
   height: 24px;
   width: 24px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: center; /*centrera verticalement*/
+  justify-content: center; /*centrera horizontalement*/
   background-color: white;
   border-radius: 50%;
   color: #99e2d0;
@@ -253,14 +253,13 @@ img {
   animation-delay: 4s;
 }
 
-@media (min-width: 992px) {
-  .menu-card:hover .card-check {
-    margin: 0;
-  }
-  .menu-card:hover .card-check i {
-    transform: rotate(0deg); /*fera une animation de rotation*/
-  }
+.menu-card:hover .card-check {
+  margin: 0;
 }
+.menu-card:hover .card-check i {
+  transform: rotate(0deg); /*fera une animation de rotation*/
+}
+
 /*Restaurant page fin*/
 * {
   box-sizing: border-box;
@@ -276,8 +275,8 @@ body {
   -webkit-perspective: 700px;
   perspective: 700px; /*pour donner une impression de perspective*/
   display: flex;
-  align-items: center; /*afin de centrer les element au centre*/
-  justify-content: center;
+  align-items: center; /*centrera verticalement*/
+  justify-content: center; /*centrera horizontalement*/
   position: fixed; /*position etabli par le bloc conteneur initial alias la fenetre*/
   height: 100%;
   width: 100%;
@@ -383,8 +382,8 @@ body {
 /*LOCATION*/
 .location {
   display: flex;
-  justify-content: center;
-  align-items: center; /*centre l'icone au reste*/
+  align-items: center; /*centrera verticalement*/
+  justify-content: center; /*centrera horizontalement*/
   background-color: #eaeaea;
   padding: 20px 0;
 }
@@ -444,8 +443,8 @@ body {
 }
 .functionary span {
   display: flex;
-  align-items: center; /*centrera le chiffre verticalement*/
-  justify-content: center; /*centrera le chiffre horizontalement*/
+  align-items: center; /*centrera verticalement*/
+  justify-content: center; /*centrera horizontalement*/
   border-radius: 50%;
   background-color: #9356dc;
   color: white;

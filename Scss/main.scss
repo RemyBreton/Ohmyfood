@@ -1,5 +1,6 @@
 /*GENERAL*/
-@import "./Utils/variables.scss";
+@import "./Utils/_variables.scss";
+@import "./Utils/_mixins.scss";
 @import "./Pages/_restaurant.scss";
 
 * {
@@ -15,9 +16,7 @@ body {
 .loader{
 	-webkit-perspective:700px;
 	perspective: 700px; /*pour donner une impression de perspective*/
-    display: flex;
-    align-items: center;    /*afin de centrer les element au centre*/
-    justify-content: center;
+    @include center;
     position: fixed;    /*position etabli par le bloc conteneur initial alias la fenetre*/
     height: 100%;
     width: 100%;
@@ -56,8 +55,8 @@ body {
 }
 @keyframes loader { /*pour cacher le loader une fois chargé a 100%*/
     100% {
-      opacity: 0;
-      z-index: -1000;
+        opacity: 0;
+        z-index: -1000;
     }
 }
 .loader>span:nth-child(2){
@@ -115,9 +114,7 @@ body {
 }
 /*LOCATION*/
 .location {
-    display: flex;
-    justify-content: center;    
-    align-items: center;    /*centre l'icone au reste*/
+    @include center;
     background-color: #eaeaea;
     padding: 20px 0;
     span {
@@ -172,11 +169,9 @@ body {
         gap: 32px;
         padding: 0;
         margin: 0 0 50px;
-    }
+    } 
     span {
-        display: flex;  
-        align-items: center;    /*centrera le chiffre verticalement*/
-        justify-content: center;    /*centrera le chiffre horizontalement*/
+        @include center;
         border-radius: 50%;
         background-color: $first-color;
         color: white;
@@ -193,7 +188,7 @@ body {
         border-radius: 20px;
         gap: 16px;
         font-weight: bold;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        @include card-shadow;
         i {
             color: #7e7e7e; 
         }
@@ -231,7 +226,7 @@ body {
     border-radius: 16px;
     position: relative;
     height: 250px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    @include card-shadow;
     a {
         text-decoration: none;
         color: black;

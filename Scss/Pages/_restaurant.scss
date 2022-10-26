@@ -10,9 +10,7 @@
         font-size: 22px;
     }
     .container-logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include center;
         width: 100%;
     }
 }
@@ -139,7 +137,7 @@ img {
     height: 64px;   /*hauteur de la card*/
     border-radius: 16px;
     margin-bottom: 16px;    /*marge entre chaque card*/
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    @include card-shadow;
     animation: fadein 4.4s;
     animation-delay: 0.01s;
     animation-fill-mode: both;
@@ -161,7 +159,7 @@ img {
         flex-direction: column;
         justify-content: center;
         overflow: hidden;
-        margin-left: 16px;
+        margin: 0 16px;
         flex: 1 1 0;    /*raccourcie flex-grow ,shrink,basis afin d'alouer l'espace*/
         h3,
         p {
@@ -179,9 +177,7 @@ img {
     }
     .card-check {
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include center;
         background-color: $third-color;
         transition: all 0.5s;
         width: 56px;
@@ -189,9 +185,7 @@ img {
         i {
             height: 24px;
             width: 24px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include center;
             background-color: white;
             border-radius: 50%;
             color: $third-color;
@@ -240,12 +234,11 @@ img {
 .delay-10 {
     animation-delay: 4s;
 }
-@media (min-width: 992px) {
-    .menu-card:hover .card-check {
-        margin: 0;
-        i {
-        transform: rotate(0deg);    /*fera une animation de rotation*/
-        }
+
+.menu-card:hover .card-check {
+    margin: 0;
+    i {
+    transform: rotate(0deg);    /*fera une animation de rotation*/
     }
 }
 /*Restaurant page fin*/
