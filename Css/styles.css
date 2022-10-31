@@ -142,7 +142,7 @@ img {
   border-radius: 16px;
   margin-bottom: 16px; /*marge entre chaque card*/
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  animation: fadein 4.4s;
+  animation: fadein 4.4s;   /*Pour l'animation de fondu*/
   animation-delay: 0.01s;
   animation-fill-mode: both;
   opacity: 0;
@@ -502,6 +502,10 @@ body {
   position: relative;
   height: 250px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.restaurant-card:hover {
+  box-shadow: rgba(255, 121, 218, 0.7) 0px 10px 15px -3px, rgb(147, 86, 220) 0px 4px 6px -2px;
+  transform: scale(1.02);
 }
 .restaurant-card a {
   text-decoration: none;

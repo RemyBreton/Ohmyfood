@@ -227,6 +227,10 @@ body {
     position: relative;
     height: 250px;
     @include card-shadow;
+    &:hover {
+        box-shadow: rgba(255, 121, 218, 0.7) 0px 10px 15px -3px, rgb(147, 86, 220) 0px 4px 6px -2px;
+        transform: scale(1.02);
+    }
     a {
         text-decoration: none;
         color: black;
