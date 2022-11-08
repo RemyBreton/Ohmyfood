@@ -142,7 +142,7 @@ img {
   border-radius: 16px;
   margin-bottom: 16px; /*marge entre chaque card*/
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  animation: fadein 4.4s;   /*Pour l'animation de fondu*/
+  animation: fadein 3.3s; /*temps d'animation des cards à l'arrivé*/
   animation-delay: 0.01s;
   animation-fill-mode: both;
   opacity: 0;
@@ -214,43 +214,43 @@ img {
 }
 
 .delay-1 {
-  animation-delay: 0.4s;
+  animation-delay: 0.3s; /*delai des animations des cards à l'arrivé*/
 }
 
 .delay-2 {
-  animation-delay: 0.8s;
+  animation-delay: 0.6s;
 }
 
 .delay-3 {
-  animation-delay: 1.2s;
+  animation-delay: 0.9s;
 }
 
 .delay-4 {
-  animation-delay: 1.6s;
+  animation-delay: 1.2s;
 }
 
 .delay-5 {
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 
 .delay-6 {
-  animation-delay: 2.4s;
+  animation-delay: 1.8s;
 }
 
 .delay-7 {
-  animation-delay: 2.8s;
+  animation-delay: 2.1s;
 }
 
 .delay-8 {
-  animation-delay: 3.2s;
+  animation-delay: 2.4s;
 }
 
 .delay-9 {
-  animation-delay: 3.6s;
+  animation-delay: 2.7s;
 }
 
 .delay-10 {
-  animation-delay: 4s;
+  animation-delay: 3s;
 }
 
 .menu-card:hover .card-check {
@@ -423,7 +423,7 @@ body {
 .discovery button:hover {
   transform: scale(1.02); /*grossira au passage de la souris*/
   opacity: 0.9; /*reduira l'opacity au passage de la souris*/
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /*legere difference de box shadow en hover*/
 }
 
 /*FUNCTIONARY*/
@@ -504,8 +504,8 @@ body {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 .restaurant-card:hover {
-  box-shadow: rgba(255, 121, 218, 0.7) 0px 10px 15px -3px, rgb(147, 86, 220) 0px 4px 6px -2px;
-  transform: scale(1.02);
+  box-shadow: rgba(255, 121, 218, 0.7) 0px 10px 15px -3px, rgb(147, 86, 220) 0px 4px 6px -2px; /*box-shadow aux couleurs du site afin d'attirer l'oeil sur les cards au passage de la souris*/
+  transform: scale(1.02); /*grossissement au passage de la souris*/
 }
 .restaurant-card a {
   text-decoration: none;
@@ -609,6 +609,13 @@ footer a:hover {
 }
 footer i {
   margin-right: 8px;
+}
+
+@media (min-width: 768px) {
+  footer {
+    text-align: center;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

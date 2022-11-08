@@ -152,7 +152,7 @@ body {
         &:hover {
             transform: scale(1.02);     /*grossira au passage de la souris*/
             opacity: 0.9;           /*reduira l'opacity au passage de la souris*/
-            box-shadow: 0 6px 12px rgb(0 0 0 / 50%);
+            box-shadow: 0 6px 12px rgb(0 0 0 / 50%);    /*legere difference de box shadow en hover*/
         }
     }
 }
@@ -228,8 +228,8 @@ body {
     height: 250px;
     @include card-shadow;
     &:hover {
-        box-shadow: rgba(255, 121, 218, 0.7) 0px 10px 15px -3px, rgb(147, 86, 220) 0px 4px 6px -2px;
-        transform: scale(1.02);
+        box-shadow: rgba(255, 121, 218, 0.7) 0px 10px 15px -3px, rgb(147, 86, 220) 0px 4px 6px -2px; /*box-shadow aux couleurs du site afin d'attirer l'oeil sur les cards au passage de la souris*/
+        transform: scale(1.02); /*grossissement au passage de la souris*/
     }
     a {
         text-decoration: none;
@@ -262,9 +262,9 @@ body {
         display: none;      /*pour desactiver la checkbox d'origine*/
     }
     .unchecked,
-    .checked {
+    .checked { 
         position: absolute;
-        right: 20px;
+        right: 20px;    
         bottom: 20px;
         font-size: 32px;
         cursor: pointer;
@@ -332,5 +332,11 @@ footer {
     }
     i {
         margin-right: 8px;
+    }
+}
+@media (min-width:768px) {
+    footer {
+        text-align: center;
+        align-items: center;
     }
 }

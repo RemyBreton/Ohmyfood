@@ -138,7 +138,7 @@ img {
     border-radius: 16px;
     margin-bottom: 16px;    /*marge entre chaque card*/
     @include card-shadow;
-    animation: fadein 4.4s;
+    animation: fadein 3.3s; /*temps d'animation des cards à l'arrivé*/
     animation-delay: 0.01s;
     animation-fill-mode: both;
     opacity: 0;
@@ -205,34 +205,34 @@ img {
     }
 }
 .delay-1 {
-    animation-delay: 0.4s;
+    animation-delay: 0.3s;      /*delai des animations des cards à l'arrivé*/
 }
 .delay-2 {
-    animation-delay: 0.8s;
+    animation-delay: 0.6s;
 }
 .delay-3 {
-    animation-delay: 1.2s;
+    animation-delay: 0.9s;
 }
 .delay-4 {
-    animation-delay: 1.6s;
+    animation-delay: 1.2s;
 }
 .delay-5 {
-    animation-delay: 2s;
+    animation-delay: 1.5s;
 }
 .delay-6 {
-    animation-delay: 2.4s;
+    animation-delay: 1.8s;
 }
 .delay-7 {
-    animation-delay: 2.8s;
+    animation-delay: 2.1s;
 }
 .delay-8 {
-    animation-delay: 3.2s;
+    animation-delay: 2.4s;
 }
 .delay-9 {
-    animation-delay: 3.6s;
+    animation-delay: 2.7s;
 }
 .delay-10 {
-    animation-delay: 4s;
+    animation-delay: 3s;
 }
 
 .menu-card:hover .card-check {
